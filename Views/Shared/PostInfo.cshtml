@@ -1,0 +1,43 @@
+<div class="row">
+    <div>
+        <a href="/bright_ideas">Bright Ideas</a>
+    </div>
+    <div>
+        <a href="/Logout">Logout</a>
+    </div>
+</div>
+<div class="row">
+    <div>
+        <h5><a href="/users/@ViewBag.ThisPost.Creator.UserId">@ViewBag.ThisPost.Creator.Alias</a> says:</h5>
+    </div>
+</div>
+<div class="row">
+    <div style = "border: solid black 2px; padding: 2px;">
+        <form>
+            <fieldset >
+                <p>@ViewBag.ThisPost.Content</p>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<hr>
+<h5>People who liked this post:</h5>
+<div class="row">
+    <table border='1' style="width: 40%; padding:3px;">
+        <thead>
+            <th>Alias</th>
+            <th>Name</th>
+        </thead>
+        <tbody>
+            @{
+                foreach (var like in ViewBag.ThisPost.Likes)
+                {
+                    <tr>
+                        <td><a href="/users/@like.User.UserId">@like.User.Alias</a></td>
+                        <td>@like.User.Name</td> 
+                    </tr>                  
+                }
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-2">
+        <a href="/bright_ideas">Bright Ideas</a>
+    </div>
+    <div class="col-2">
+        <a href="/Logout">Logout</a>
+    </div>
+</div>
+<div>
+    <h3>Name: @ViewBag.ThisUser.Name</h3>
+    <h3>Alias: @ViewBag.ThisUser.Alias</h3>
+    <h3>Email: @ViewBag.ThisUser.Email</h3>
+
+    <hr>
+
+    <h4>Total Number of Posts: @ViewBag.ThisUser.MyPosts.Count</h4>
+    <h4>Total Number of Likes: @ViewBag.ThisUser.Likes.Count</h4>
+
+</div>
